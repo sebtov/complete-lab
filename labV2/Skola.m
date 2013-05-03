@@ -210,14 +210,14 @@ static NSString * const schemaKey = @"schema_key";
     return [[self allSchema] filteredSetUsingPredicate:predicate];
 }
 
--(void) saveToFileSchema:(NSString*) fileNameSchema
-{
-    NSDictionary *skolaAsJson = @{@"Scheman" : [self serializeCollectionToJson:[self allSchema]]};
-    
-    NSData *skolaAsData = [NSJSONSerialization dataWithJSONObject:skolaAsJson options:NSJSONWritingPrettyPrinted error:NULL];
-    
-    [skolaAsData writeToFile:fileNameSchema atomically:YES];
-}
+//-(void) saveToFileSchema:(NSString*) fileNameSchema
+//{
+//    NSDictionary *skolaAsJson = @{@"Scheman" : [self serializeCollectionToJson:[self allSchema]]};
+//    
+//    NSData *skolaAsData = [NSJSONSerialization dataWithJSONObject:skolaAsJson options:NSJSONWritingPrettyPrinted error:NULL];
+//    
+//    [skolaAsData writeToFile:fileNameSchema atomically:YES];
+//}
 
 -(void)readFromFileSchema:(NSString *)fileNameSchema
 {

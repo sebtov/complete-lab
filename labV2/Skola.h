@@ -38,8 +38,8 @@ extern NSString * const schemaAddedNotification;
  -(void) saveToFile:(NSString*) fileName;
  -(void) readFromFile:(NSString*) fileName;
 
--(void) saveToFileSchema:(NSString*) fileNameSchema;
--(void) readFromFileSchema:(NSString*) fileNameSchema;
+//-(void) saveToFileSchema:(NSString*) fileNameSchema;
+//-(void) readFromFileSchema:(NSString*) fileNameSchema;
 
 -(void) sendMessageToAll:(NSString*) messageToAll;
 

@@ -23,6 +23,7 @@
     return [self initMandag:@"Mandag" InitTisdag:@"Tisdag" InitOnsdag:@"Onsdag" InitTorsdag:@"Torsdag" InitFredag:@"fredag" InitLasa:@"Lasa"];
 }
 
+
 -(id) initMandag:(NSString *)Mandag InitTisdag:(NSString *)Tisdag InitOnsdag:(NSString *)Onsdag InitTorsdag:(NSString *)Torsdag InitFredag:(NSString *)Fredag InitLasa:(NSString *)Lasa{
     self = [super init];
     

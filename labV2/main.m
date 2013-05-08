@@ -13,10 +13,10 @@ int main(int argc, const char * argv[])
         
 #pragma Create a student
 
-        
+       
         Couch *couch =[[Couch alloc] init];
-        Student *student = [[Student alloc] initWithName:@"Patrik" lastName:@"Hol" klass:@"1B"];
-        [couch reqToUrl:@"Http://localhost:5984/test/Patrik" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+        Student *student = [[Student alloc] initWithName:@"zeb" lastName:@"Hol" klass:@"1B"];
+        [couch reqToUrl:@"Http://localhost:5984/test/arne" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
             NSLog(@"%@",response);
             NSLog(@"%@",error);
             NSLog(@"%@",data);
@@ -73,8 +73,9 @@ int main(int argc, const char * argv[])
 
         
 #pragma Get student schema
-     /*
-        
+     
+        /*
+         Http://localhost:5984/test/_design/project/_view/tisdag
                                 __block id result1;
                                 Couch *couch =[[Couch alloc] init];
     
@@ -95,10 +96,34 @@ int main(int argc, const char * argv[])
                                                         }
                                                     }];
                                                 }];
-        
         */
         
-#pragma Send message to Student 
+        /*
+        __block id result1;
+
+        Couch *couch =[[Couch alloc] init];
+
+        [couch reqToUrl:@"Http://localhost:5984/test/_design/project/_view/tisdag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+            //            NSLog(@"%@",response);
+            //            NSLog(@"Elev namn eller Schema stämmer inte%@",error);
+                        NSLog(@"%@",data);
+            [couch reqToUrl:@"Http://localhost:5984/test/Jimmy" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                id result2 = [Couch parseData:data];
+                if ([[result1 valueForKey:@"id"] isEqualTo:[result2 valueForKey:@"id"]]) {
+                    NSLog(@"Här är ditt schema %@",result1);
+                    
+                } else {
+                    NSLog(@"Fel Student namn eller Schema, Var god försök igen");
+                }
+            }];
+            //
+                        NSLog(@"%@", [Couch parseData:data]);
+            result1 = [Couch parseData:data];
+      
+        }];
+         
+         */
+#pragma Send message to Student
         
                           /*                      __block id result1;
                                                 Couch *couch =[[Couch alloc] init];
@@ -119,8 +144,28 @@ int main(int argc, const char * argv[])
         
         
         */
+        /*
+        __block id result1;
+        Couch *couch =[[Couch alloc] init];
         
-
+        [couch reqToUrl:@"Http://localhost:5984/test/_design/project/_view/mondag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+            //            NSLog(@"%@",response);
+            //            NSLog(@"Elev namn eller Schema stämmer inte%@",error);
+            //            NSLog(@"%@",data);
+            //
+                        NSLog(@"%@", [Couch parseData:data]);
+            result1 = [Couch parseData:data];
+            [couch reqToUrl:@"Http://localhost:5984/test/_design/project/_view/id?key=Sebastian" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                id result2 = [Couch parseData:data];
+                if ([[result1 valueForKey:@"_id"] isEqualTo:[result2 valueForKey:@"_id"]]) {
+                    NSLog(@"Här är ditt schema %@",result1);
+                    
+                } else {
+                    NSLog(@"Fel Student namn eller Schema, Var god försök igen");
+                }
+            }];
+        }];
+*/
     
         [[NSRunLoop currentRunLoop] run];
         

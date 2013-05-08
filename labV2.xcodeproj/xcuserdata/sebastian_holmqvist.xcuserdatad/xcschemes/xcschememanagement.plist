@@ -4,14 +4,56 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SchemaTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>StudentTest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>labV2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6451C096173A44D000B32CF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64E0A7E2173A561F005AF9DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64F9F080173A7C9F007A49DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64F9F099173AC36D007A49DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64F9F0B4173AC752007A49DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64F9F0CB173AD488007A49DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A7F31759171D62EC00E0322C</key>
 		<dict>
 			<key>primary</key>

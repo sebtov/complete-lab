@@ -40,7 +40,6 @@
 }
 -(void)ShowStudent
 {
-//    NSLog(@"%@ %@", self.firstName, self.lastName);
 }
 
 -(NSUInteger)hash
@@ -50,18 +49,14 @@
 
 -(BOOL)isEqual:(id)other
 {
-    // if other points to self - we are equal
     if(other == self){
         return YES;
     }
     
-    // if other is not nil AND is member of same class as we (self)
     if(other && [other isMemberOfClass:[self class]]){
-        // comapre animalId
         return [[other studentId] isEqualToString:self.studentId];
     }
     
-    // we are not equal
     return NO;
 }
 

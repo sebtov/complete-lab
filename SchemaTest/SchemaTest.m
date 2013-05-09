@@ -31,6 +31,10 @@
     Schema *Newschema =[[Schema alloc]initMandag:@"1" InitTisdag:@"2" InitOnsdag:@"3" InitTorsdag:@"4" InitFredag:@"5" InitLasa:@"6"];
     NSArray *scheman = @[Newschema];
     NSLog(@"%@",scheman);
+    STAssertEquals(Newschema.Fredag,@"5",@"Should be 5");
+
+    
+
     
 }
 

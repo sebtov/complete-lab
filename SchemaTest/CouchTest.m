@@ -21,16 +21,16 @@
 }
 
 - (void)tearDown {
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:2]];
     couch = nil;
+
 }
 
 - (void)testExample
 {
-    __block id result1;
     
     [couch reqToUrl:@"Http://localhost:5984/test/1A" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
     
-        result1 = [Couch parseData:data];
         STAssertNotNil(data, @"data is nil");
 
 

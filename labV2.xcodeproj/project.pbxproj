@@ -458,6 +458,7 @@
 				64F9F0C4173AC752007A49DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7F31755171D62EC00E0322C /* Build configuration list for PBXProject "labV2" */ = {
 			isa = XCConfigurationList;

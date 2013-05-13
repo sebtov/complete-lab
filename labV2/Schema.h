@@ -19,11 +19,10 @@
 @property (nonatomic, copy) NSString *Fredag;
 @property (nonatomic, copy) NSString *Lasa;
 
-
-
 @property (nonatomic, copy, readonly) NSString *studentId;
 
 -(id) initMandag:(NSString*) Mandag InitTisdag:(NSString*) Tisdag InitOnsdag:(NSString*) Onsdag InitTorsdag:(NSString*) Torsdag InitFredag:(NSString*) Fredag InitLasa:(NSString*)Lasa;
+
 
 +(id) dayFromJson:(NSDictionary*) dayAsJson;
 

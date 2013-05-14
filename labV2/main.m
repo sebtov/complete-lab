@@ -78,10 +78,9 @@ int main(int argc, const char * argv[])
         
 #pragma mark Get Message for Student
 // Use studentId to get your massage.
-        
-  /*
+        /*
         Couch *couch =[[Couch alloc] init];
-        [couch reqToUrl:@"Http://localhost:5984/message/_design/project/_view/student?key=%2286742F93-9CE5-4187-B89F-EB5C9EF4A35F%22" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+        [couch reqToUrl:@"http://seb.iriscouch.com/messages/_design/project/_view/student?key=%2286742F93-9CE5-4187-B89F-EB5C9EF4A35F%22" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
             NSLog(@"here is all your messages: %@",[Couch parseData:data]);
             
         }];

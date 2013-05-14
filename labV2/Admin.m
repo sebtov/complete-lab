@@ -1,7 +1,6 @@
 
 
 #import "Admin.h"
-#import "Skola.h"
 #import "Student.h"
 #import "Schema.h"
 

@@ -76,8 +76,5 @@
 {
     return [Couch jsonValue:[self dictionary]];
 }
-    
-        
-   
 
 @end

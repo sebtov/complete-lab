@@ -19,10 +19,11 @@
 		64F9F0E5173ADEA7007A49DA /* StudentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F0E4173ADEA7007A49DA /* StudentsTest.m */; };
 		64F9F0E6173AE014007A49DA /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F3176F171D637D00E0322C /* Student.m */; };
 		64F9F0E9173AE21F007A49DA /* CouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F0E8173AE21F007A49DA /* CouchTest.m */; };
+		64F9F145174183BE007A49DA /* SendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F144174183BE007A49DA /* SendMessage.m */; };
+		64F9F148174183F6007A49DA /* Message+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F147174183F6007A49DA /* Message+Json.m */; };
 		A7F3175E171D62EC00E0322C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F3175D171D62EC00E0322C /* Foundation.framework */; };
 		A7F31761171D62EC00E0322C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F31760171D62EC00E0322C /* main.m */; };
 		A7F31765171D62EC00E0322C /* labV2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7F31764171D62EC00E0322C /* labV2.1 */; };
-		A7F3176D171D636A00E0322C /* Skola.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F3176C171D636A00E0322C /* Skola.m */; };
 		A7F31770171D637D00E0322C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F3176F171D637D00E0322C /* Student.m */; };
 		A7F31773171D6AA700E0322C /* Admin.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F31772171D6AA700E0322C /* Admin.m */; };
 		A7F31777171D869400E0322C /* Student+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F31776171D869400E0322C /* Student+Json.m */; };
@@ -65,13 +66,15 @@
 		64F9F0E4173ADEA7007A49DA /* StudentsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsTest.m; sourceTree = "<group>"; };
 		64F9F0E7173AE21F007A49DA /* CouchTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchTest.h; sourceTree = "<group>"; };
 		64F9F0E8173AE21F007A49DA /* CouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouchTest.m; sourceTree = "<group>"; };
+		64F9F143174183BD007A49DA /* SendMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessage.h; sourceTree = "<group>"; };
+		64F9F144174183BE007A49DA /* SendMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessage.m; sourceTree = "<group>"; };
+		64F9F146174183F6007A49DA /* Message+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Message+Json.h"; sourceTree = "<group>"; };
+		64F9F147174183F6007A49DA /* Message+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Message+Json.m"; sourceTree = "<group>"; };
 		A7F3175A171D62EC00E0322C /* labV2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = labV2; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F3175D171D62EC00E0322C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7F31760171D62EC00E0322C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7F31763171D62EC00E0322C /* labV2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "labV2-Prefix.pch"; sourceTree = "<group>"; };
 		A7F31764171D62EC00E0322C /* labV2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = labV2.1; sourceTree = "<group>"; };
-		A7F3176B171D636A00E0322C /* Skola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skola.h; sourceTree = "<group>"; };
-		A7F3176C171D636A00E0322C /* Skola.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skola.m; sourceTree = "<group>"; };
 		A7F3176E171D637D00E0322C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		A7F3176F171D637D00E0322C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		A7F31771171D6AA700E0322C /* Admin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admin.h; sourceTree = "<group>"; };
@@ -175,8 +178,6 @@
 				A7F31760171D62EC00E0322C /* main.m */,
 				6439223A173129CD00DB6364 /* Couch.h */,
 				6439223B173129CD00DB6364 /* Couch.m */,
-				A7F3176B171D636A00E0322C /* Skola.h */,
-				A7F3176C171D636A00E0322C /* Skola.m */,
 				64392214172542F400DB6364 /* Schema.h */,
 				64392215172542F400DB6364 /* Schema.m */,
 				A7F3176E171D637D00E0322C /* Student.h */,
@@ -188,6 +189,10 @@
 				A7F31776171D869400E0322C /* Student+Json.m */,
 				643922171725469B00DB6364 /* Schema+Json.h */,
 				643922181725469B00DB6364 /* Schema+Json.m */,
+				64F9F143174183BD007A49DA /* SendMessage.h */,
+				64F9F144174183BE007A49DA /* SendMessage.m */,
+				64F9F146174183F6007A49DA /* Message+Json.h */,
+				64F9F147174183F6007A49DA /* Message+Json.m */,
 			);
 			path = labV2;
 			sourceTree = "<group>";
@@ -313,13 +318,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F31761171D62EC00E0322C /* main.m in Sources */,
-				A7F3176D171D636A00E0322C /* Skola.m in Sources */,
 				A7F31770171D637D00E0322C /* Student.m in Sources */,
 				A7F31773171D6AA700E0322C /* Admin.m in Sources */,
 				A7F31777171D869400E0322C /* Student+Json.m in Sources */,
 				64392216172542F400DB6364 /* Schema.m in Sources */,
 				643922191725469B00DB6364 /* Schema+Json.m in Sources */,
 				6439223C173129CD00DB6364 /* Couch.m in Sources */,
+				64F9F145174183BE007A49DA /* SendMessage.m in Sources */,
+				64F9F148174183F6007A49DA /* Message+Json.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

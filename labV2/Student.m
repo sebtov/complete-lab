@@ -38,9 +38,7 @@
 {
     return [NSString stringWithFormat:@"%@, %@ %@, %@", self.studentId, self.firstName, self.lastName, self.klass];
 }
--(void)ShowStudent
-{
-}
+
 
 -(NSUInteger)hash
 {
@@ -60,10 +58,7 @@
     return NO;
 }
 
--(void)getMessage:(NSString *)message
-{
-    NSLog(@"%@", message);
-}
+
 
 -(NSDictionary*)dictionary
 {

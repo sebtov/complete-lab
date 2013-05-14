@@ -19,15 +19,15 @@ int main(int argc, const char * argv[])
         NSLog(@"%@",dayOfWeek);
         
 #pragma mark Create a student
-
-       /*
+/*
+       
         NSLog(@"*************** ADD STUDENT ***************");
         Couch *couch =[[Couch alloc] init];
-        Student *student = [[Student alloc] initWithName:@"Anders" lastName:@"Master" klass:@"1C"];
+        Student *student = [[Student alloc] initWithName:@"Olle" lastName:@"Master" klass:@"1C"];
         if([student.firstName isEqualTo:@""] || [student.lastName isEqualTo:@""] || [student.klass isEqualTo:@""]){
             NSLog(@"Leave no blank spaces");
         } else {
-            [couch reqToUrl:@"http://seb.iriscouch.com/school/anders" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+            [couch reqToUrl:@"http://seb.iriscouch.com/school/olle" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
               
                 
                 NSLog(@"%@", [Couch parseData:data]);
@@ -37,7 +37,7 @@ int main(int argc, const char * argv[])
                 
         }
         
-        */
+    */    
        
 #pragma mark Send Message to Student
  //USE studentId to send to rigth student
@@ -45,7 +45,7 @@ int main(int argc, const char * argv[])
         NSLog(@"***************  SEND MESSEGE  ***************");
 
         Couch *couch =[[Couch alloc] init];
-            SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan jimmy, rosa bil" StudentId:@"86742F93-9CE5-4187-B89F-EB5C9EF4A35F"];{
+            SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan jimmy, bla bil" StudentId:@"86742F93-9CE5-4187-B89F-EB5C9EF4A35F"];{
         
             [couch reqToUrl:@"http://seb.iriscouch.com/messages" HttpMethod:@"POST" body:[message json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
                 NSLog(@"%@", [Couch parseData:data]);
@@ -64,7 +64,7 @@ int main(int argc, const char * argv[])
          NSLog(@"***************  SEND MESSEGE  ***************");
          
          Couch *couch =[[Couch alloc] init];
-         SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan alla barn, glad posk" StudentId:@"messageToAll"];{
+         SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan alla barn, glad jul" StudentId:@"messageToAll"];{
          
          [couch reqToUrl:@"http://seb.iriscouch.com/messages" HttpMethod:@"POST" body:[message json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
          NSLog(@"%@", [Couch parseData:data]);
@@ -73,8 +73,8 @@ int main(int argc, const char * argv[])
          }];
          
          }
+       */  
          
-         */
         
 #pragma mark Get Message for Student
 // Use studentId to get your massage.
@@ -181,19 +181,17 @@ int main(int argc, const char * argv[])
          */
         
 #pragma mark Update Homework
-        /*
-         
+        
+         /*
          NSLog(@"***************  UPDATE HOMEWORK ***************");
          Couch *couch =[[Couch alloc] init];
-         Read *read = [[Read alloc]initWithReadMonday:@"Matteboken 1-51" readTuesday:@"Engelska boken 1-7" readWednesday:@"Spanska boken 1-99" readThursday:@"blank" readFriday:@"blank" readWeekend:@"blank" classId:@"1C"];
-         [couch reqToUrl:@"http://seb.iriscouch.com/school/reading?rev=2-5a35f4a5f63e92e85a76ea9141002f8f" HttpMethod:@"PUT" body:[read json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+         Read *read = [[Read alloc]initWithReadMonday:@"Matteboken 1-111" readTuesday:@"Engelska boken 1-7" readWednesday:@"Spanska boken 1-99" readThursday:@"blank" readFriday:@"blank" readWeekend:@"blank" classId:@"1C"];
+         [couch reqToUrl:@"http://seb.iriscouch.com/school/reading?rev=3-33e0dfcd35e65fa015d43a4437d3f7d1" HttpMethod:@"PUT" body:[read json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
          NSLog(@"%@", [Couch parseData:data]);
          NSLog(@"***************  SUCCESS  ***************");
          
          }];
-         */
-
-       
+       */
         
 #pragma mark Get student schema
      

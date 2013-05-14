@@ -15,9 +15,7 @@
 
 +(id) studentFromJson:(NSDictionary*) studentAsJson;
 
--(void) ShowStudent;
 
--(void)getMessage:(NSString *)message;
 -(NSString*)json;
 -(NSDictionary*)dictionary;
 

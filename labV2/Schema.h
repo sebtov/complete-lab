@@ -19,8 +19,7 @@
 
 +(id) dayFromJson:(NSDictionary*) dayAsJson;
 
--(void) ShowSchema;
--(void) ShowDay;
+
 
 
 -(NSDictionary*)dictionary;

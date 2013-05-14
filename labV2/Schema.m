@@ -44,14 +44,7 @@
 }
 
 
--(void)ShowSchema
-{
-    NSLog(@"Måndag:%@ Tisdag:%@ Onsdag:%@ Torsdag%@ Fredag:%@", self.Mandag, self.Tisdag, self.Onsdag, self.Torsdag, self.Fredag);
-}
--(void) ShowDay
-{
-    NSLog(@"%@:",self);
-}
+
 
 
 

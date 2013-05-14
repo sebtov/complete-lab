@@ -32,9 +32,6 @@
     NSArray *scheman = @[Newschema];
     NSLog(@"%@",scheman);
     STAssertEquals(Newschema.Fredag,@"5",@"Should be 5");
-
-    
-
     
 }
 

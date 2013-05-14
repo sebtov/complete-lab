@@ -32,10 +32,6 @@
     [couch reqToUrl:@"Http://localhost:5984/test/1A" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
     
         STAssertNotNil(data, @"data is nil");
-
-
-        
-        
     }];
     
     

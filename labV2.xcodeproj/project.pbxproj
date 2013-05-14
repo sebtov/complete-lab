@@ -21,11 +21,14 @@
 		64F9F0E9173AE21F007A49DA /* CouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F0E8173AE21F007A49DA /* CouchTest.m */; };
 		64F9F145174183BE007A49DA /* SendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F144174183BE007A49DA /* SendMessage.m */; };
 		64F9F148174183F6007A49DA /* Message+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F147174183F6007A49DA /* Message+Json.m */; };
+		64F9F1791742751B007A49DA /* Read.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F1781742751B007A49DA /* Read.m */; };
+		64F9F17C1742752E007A49DA /* Read+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F17B1742752E007A49DA /* Read+Json.m */; };
+		64F9F17F174284CD007A49DA /* MessageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F17E174284CD007A49DA /* MessageTest.m */; };
+		64F9F18017428728007A49DA /* SendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9F144174183BE007A49DA /* SendMessage.m */; };
 		A7F3175E171D62EC00E0322C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F3175D171D62EC00E0322C /* Foundation.framework */; };
 		A7F31761171D62EC00E0322C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F31760171D62EC00E0322C /* main.m */; };
 		A7F31765171D62EC00E0322C /* labV2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7F31764171D62EC00E0322C /* labV2.1 */; };
 		A7F31770171D637D00E0322C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F3176F171D637D00E0322C /* Student.m */; };
-		A7F31773171D6AA700E0322C /* Admin.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F31772171D6AA700E0322C /* Admin.m */; };
 		A7F31777171D869400E0322C /* Student+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F31776171D869400E0322C /* Student+Json.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,12 @@
 		64F9F144174183BE007A49DA /* SendMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessage.m; sourceTree = "<group>"; };
 		64F9F146174183F6007A49DA /* Message+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Message+Json.h"; sourceTree = "<group>"; };
 		64F9F147174183F6007A49DA /* Message+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Message+Json.m"; sourceTree = "<group>"; };
+		64F9F1771742751A007A49DA /* Read.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Read.h; sourceTree = "<group>"; };
+		64F9F1781742751B007A49DA /* Read.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Read.m; sourceTree = "<group>"; };
+		64F9F17A1742752D007A49DA /* Read+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Read+Json.h"; sourceTree = "<group>"; };
+		64F9F17B1742752E007A49DA /* Read+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Read+Json.m"; sourceTree = "<group>"; };
+		64F9F17D174284CD007A49DA /* MessageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTest.h; sourceTree = "<group>"; };
+		64F9F17E174284CD007A49DA /* MessageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTest.m; sourceTree = "<group>"; };
 		A7F3175A171D62EC00E0322C /* labV2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = labV2; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F3175D171D62EC00E0322C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7F31760171D62EC00E0322C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,8 +86,6 @@
 		A7F31764171D62EC00E0322C /* labV2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = labV2.1; sourceTree = "<group>"; };
 		A7F3176E171D637D00E0322C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		A7F3176F171D637D00E0322C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
-		A7F31771171D6AA700E0322C /* Admin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admin.h; sourceTree = "<group>"; };
-		A7F31772171D6AA700E0322C /* Admin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Admin.m; sourceTree = "<group>"; };
 		A7F31774171D859C00E0322C /* JsonFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonFormat.h; sourceTree = "<group>"; };
 		A7F31775171D869300E0322C /* Student+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Json.h"; sourceTree = "<group>"; };
 		A7F31776171D869400E0322C /* Student+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Json.m"; sourceTree = "<group>"; };
@@ -124,6 +131,8 @@
 				64F9F0E4173ADEA7007A49DA /* StudentsTest.m */,
 				64F9F0E7173AE21F007A49DA /* CouchTest.h */,
 				64F9F0E8173AE21F007A49DA /* CouchTest.m */,
+				64F9F17D174284CD007A49DA /* MessageTest.h */,
+				64F9F17E174284CD007A49DA /* MessageTest.m */,
 				64F9F0B9173AC752007A49DA /* Supporting Files */,
 			);
 			path = SchemaTest;
@@ -182,8 +191,6 @@
 				64392215172542F400DB6364 /* Schema.m */,
 				A7F3176E171D637D00E0322C /* Student.h */,
 				A7F3176F171D637D00E0322C /* Student.m */,
-				A7F31771171D6AA700E0322C /* Admin.h */,
-				A7F31772171D6AA700E0322C /* Admin.m */,
 				A7F31774171D859C00E0322C /* JsonFormat.h */,
 				A7F31775171D869300E0322C /* Student+Json.h */,
 				A7F31776171D869400E0322C /* Student+Json.m */,
@@ -193,6 +200,10 @@
 				64F9F144174183BE007A49DA /* SendMessage.m */,
 				64F9F146174183F6007A49DA /* Message+Json.h */,
 				64F9F147174183F6007A49DA /* Message+Json.m */,
+				64F9F1771742751A007A49DA /* Read.h */,
+				64F9F1781742751B007A49DA /* Read.m */,
+				64F9F17A1742752D007A49DA /* Read+Json.h */,
+				64F9F17B1742752E007A49DA /* Read+Json.m */,
 			);
 			path = labV2;
 			sourceTree = "<group>";
@@ -310,6 +321,8 @@
 				64F9F0E5173ADEA7007A49DA /* StudentsTest.m in Sources */,
 				64F9F0E6173AE014007A49DA /* Student.m in Sources */,
 				64F9F0E9173AE21F007A49DA /* CouchTest.m in Sources */,
+				64F9F17F174284CD007A49DA /* MessageTest.m in Sources */,
+				64F9F18017428728007A49DA /* SendMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,13 +332,14 @@
 			files = (
 				A7F31761171D62EC00E0322C /* main.m in Sources */,
 				A7F31770171D637D00E0322C /* Student.m in Sources */,
-				A7F31773171D6AA700E0322C /* Admin.m in Sources */,
 				A7F31777171D869400E0322C /* Student+Json.m in Sources */,
 				64392216172542F400DB6364 /* Schema.m in Sources */,
 				643922191725469B00DB6364 /* Schema+Json.m in Sources */,
 				6439223C173129CD00DB6364 /* Couch.m in Sources */,
 				64F9F145174183BE007A49DA /* SendMessage.m in Sources */,
 				64F9F148174183F6007A49DA /* Message+Json.m in Sources */,
+				64F9F1791742751B007A49DA /* Read.m in Sources */,
+				64F9F17C1742752E007A49DA /* Read+Json.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

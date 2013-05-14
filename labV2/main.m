@@ -1,12 +1,11 @@
-///// SEBASTIAN & JIMMY
+                                        ///// SEBASTIAN & JIMMY
 
 #import <Foundation/Foundation.h>
 #import "Student.h"
-#import "Admin.h"
 #import "Schema.h"
 #import "SendMessage.h"
 #import "Couch.h"
-
+#import "Read.h"
 int main(int argc, const char * argv[])
 {
 
@@ -24,11 +23,11 @@ int main(int argc, const char * argv[])
        /*
         NSLog(@"*************** ADD STUDENT ***************");
         Couch *couch =[[Couch alloc] init];
-        Student *student = [[Student alloc] initWithName:@"Jimmy" lastName:@"Lidstrom" klass:@"1C"];
+        Student *student = [[Student alloc] initWithName:@"Anders" lastName:@"Master" klass:@"1C"];
         if([student.firstName isEqualTo:@""] || [student.lastName isEqualTo:@""] || [student.klass isEqualTo:@""]){
             NSLog(@"Leave no blank spaces");
         } else {
-            [couch reqToUrl:@"http://seb.iriscouch.com/school/jimmy" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+            [couch reqToUrl:@"http://seb.iriscouch.com/school/anders" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
               
                 
                 NSLog(@"%@", [Couch parseData:data]);
@@ -46,7 +45,7 @@ int main(int argc, const char * argv[])
         NSLog(@"***************  SEND MESSEGE  ***************");
 
         Couch *couch =[[Couch alloc] init];
-            SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan jimmy, gul bil" StudentId:@"86742F93-9CE5-4187-B89F-EB5C9EF4A35F"];{
+            SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan jimmy, rosa bil" StudentId:@"86742F93-9CE5-4187-B89F-EB5C9EF4A35F"];{
         
             [couch reqToUrl:@"http://seb.iriscouch.com/messages" HttpMethod:@"POST" body:[message json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
                 NSLog(@"%@", [Couch parseData:data]);
@@ -55,17 +54,17 @@ int main(int argc, const char * argv[])
             }];
             
         }
-        
-*/
+        */
+
 #pragma mark Send Message to All
         //USE messageToAll to send to all students
         
-        /*
         
+        /*
          NSLog(@"***************  SEND MESSEGE  ***************");
          
          Couch *couch =[[Couch alloc] init];
-         SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan alla barn, rod bil" StudentId:@"messageToAll"];{
+         SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan alla barn, glad posk" StudentId:@"messageToAll"];{
          
          [couch reqToUrl:@"http://seb.iriscouch.com/messages" HttpMethod:@"POST" body:[message json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
          NSLog(@"%@", [Couch parseData:data]);
@@ -78,40 +77,29 @@ int main(int argc, const char * argv[])
          */
         
 #pragma mark Get Message for Student
-      /*
-  
-        __block id result1;
-        Couch *couch =[[Couch alloc] init];
+// Use studentId to get your massage.
         
+  /*
+        Couch *couch =[[Couch alloc] init];
         [couch reqToUrl:@"Http://localhost:5984/message/_design/project/_view/student?key=%2286742F93-9CE5-4187-B89F-EB5C9EF4A35F%22" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
             NSLog(@"here is all your messages: %@",[Couch parseData:data]);
             
         }];
-//            result1 = [Couch parseData:data];
-//            [couch reqToUrl:@"Http://localhost:5984/mongo3/_design/project/_view/id" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
-//                NSLog(@"%@",[Couch parseData:data]);
-//                id result2 = [Couch parseData:data];
-//                if ([[result1 valueForKey:@"StudentId"] isEqualTo:[result2 valueForKey:@"studentId"]]) {
-//                    
-//                } else {
-//                    NSLog(@"Fel Student namn eller Schema, Var god försök igen");
-//                }
-//            }];
 
+       */
         
-        */
         
 #pragma mark Get Messeges for All
+ //We use view "toall" and this one is opend for every student.
         
         /*
         Couch *couch =[[Couch alloc] init];
-        
         [couch reqToUrl:@"http://seb.iriscouch.com/messages/_design/project/_view/toall" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
             NSLog(@"here is all  messages: %@",[Couch parseData:data]);
             
         }];
-      
-         */
+      */
+         
    
 # pragma mark Create new DB class
 // use your new class name id to add new scheme/student
@@ -132,12 +120,13 @@ int main(int argc, const char * argv[])
 #pragma mark Create a Schema 
 //dont forgot to use your new DB name in the URL.
 //dont forget to add your new Scheme ID in the url.
-        
-       /*
+     
+        /*
+       
         NSLog(@"*************** CREATE SCHEMA ***************");
 
     Couch *couch =[[Couch alloc]init];
-    Schema *schema = [[Schema alloc] initMandag:@"Matte 08:00 Engelska 09:00" InitTisdag:@"asas" InitOnsdag:@"Halvdag" InitTorsdag:@"Fotboll" InitFredag:@"aldrig vila" InitLasa:@"as"];
+    Schema *schema = [[Schema alloc] initMandag:@"Matte 08:00 Engelska 09:00" InitTisdag:@"asas" InitOnsdag:@"Halvdag" InitTorsdag:@"Fotboll" InitFredag:@"aldrig vila"];
         if([schema.Mandag isEqualTo:@""] || 
         [schema.Tisdag isEqualTo:@""] || 
         [schema.Onsdag isEqualTo:@""] || 
@@ -151,70 +140,104 @@ int main(int argc, const char * argv[])
             NSLog(@"***************  SUCCESS  ***************");
 
                                     }];
-        
         }
         
+  */
+
         
-  
-*/
-        
-#pragma mark Update Schema and/or Send read exercises
+#pragma mark Update Schema
  //
      /*
         
          NSLog(@"***************  UPDATE/READ EXERCISES  ***************");
 
     Couch *couch =[[Couch alloc]init];
-    Schema *schema = [[Schema alloc] initMandag:@"softbal 08:00 Engelska 09:00" InitTisdag:@"fotboll 09:00" InitOnsdag:@"Halvdag" InitTorsdag:@"Fotboll" InitFredag:@"sola" InitLasa:@"Sidor matte sidor 1-92929292"];
+    Schema *schema = [[Schema alloc] initMandag:@"softbal 08:00 Engelska 09:00" InitTisdag:@"fotboll 09:00" InitOnsdag:@"Halvdag" InitTorsdag:@"Fotboll" InitFredag:@"sola"];
         if([schema.Mandag isEqualTo:@""] || 
          [schema.Tisdag isEqualTo:@""] || 
          [schema.Onsdag isEqualTo:@""] || 
          [schema.Torsdag isEqualTo:@""] || 
-         [schema.Fredag isEqualTo:@""] || 
-         [schema.Lasa isEqualTo:@""]){
+         [schema.Fredag isEqualTo:@""])
+        {
         NSLog(@"Leave no blank spaces");
         } else {
-        [couch reqToUrl:@"http://seb.iriscouch.com/school/1C\?rev=3-1006ab14fcf88cf854d6743530bcc699" HttpMethod:@"PUT" body:[schema json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+        [couch reqToUrl:@"http://seb.iriscouch.com/school/1C\?rev=1-9b343770712e97433c2ed84d2cdeaba6" HttpMethod:@"PUT" body:[schema json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
                                
          NSLog(@"%@", [Couch parseData:data]);
                     NSLog(@"***************  SUCCESS  ***************");
                 }];
          }
         
-        
         */
-   
+#pragma mark Add reading homework
+        /*
+         NSLog(@"*************** ADD HOMEWORK ***************");
+         Couch *couch =[[Couch alloc] init];
+         Read *read = [[Read alloc]initWithReadMonday:@"Matteboken 1-4" readTuesday:@"Engelska boken 1-7" readWednesday:@"Spanska boken 1-99" readThursday:@"blank" readFriday:@"blank" readWeekend:@"blank" classId:@"1C"];
+         [couch reqToUrl:@"http://seb.iriscouch.com/school/reading" HttpMethod:@"PUT" body:[read json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+         NSLog(@"%@", [Couch parseData:data]);
+         NSLog(@"***************  SUCCESS  ***************");
+         
+         }];
+         */
+        
+#pragma mark Update Homework
+        /*
+         
+         NSLog(@"***************  UPDATE HOMEWORK ***************");
+         Couch *couch =[[Couch alloc] init];
+         Read *read = [[Read alloc]initWithReadMonday:@"Matteboken 1-51" readTuesday:@"Engelska boken 1-7" readWednesday:@"Spanska boken 1-99" readThursday:@"blank" readFriday:@"blank" readWeekend:@"blank" classId:@"1C"];
+         [couch reqToUrl:@"http://seb.iriscouch.com/school/reading?rev=2-5a35f4a5f63e92e85a76ea9141002f8f" HttpMethod:@"PUT" body:[read json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+         NSLog(@"%@", [Couch parseData:data]);
+         NSLog(@"***************  SUCCESS  ***************");
+         
+         }];
+         */
+
        
         
 #pragma mark Get student schema
      
         
-
+/*
         
-        /*
-         NSLog(@"***************  GET STUDENTS SCHEMA  ***************");
+        
+         NSLog(@"*************** START GET STUDENTS SCHEMA  ***************");
 
     __block id result1;
     Couch *couch =[[Couch alloc] init];
     
-    [couch reqToUrl:@"http://seb.iriscouch.com/school/1C" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
-    result1 = [Couch parseData:data];
-    [couch reqToUrl:@"http://seb.iriscouch.com/school/sebastian" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
-    id result2 = [Couch parseData:data];
-    if ([[result1 valueForKey:@"_id"] isEqualTo:[result2 valueForKey:@"klass"]]) {
-    NSLog(@"Here is your schedule: %@",result1);
+            [couch reqToUrl:@"http://seb.iriscouch.com/school/1C" HttpMethod:@"GET" body:nil    onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                result1 = [Couch parseData:data];
+            [couch reqToUrl:@"http://seb.iriscouch.com/school/sebastian" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                id result2 = [Couch parseData:data];
+                if ([[result1 valueForKey:@"_id"] isEqualTo:[result2 valueForKey:@"klass"]]) {
+                    NSLog(@"*************** Here is your schedul e***************");
+                    NSLog(@"%@ ",result1);
         
-        NSLog(@"***************  Here is todays schedule  ***************");
+
         if([dayOfWeek isEqual:@"1"])
         {
             [couch reqToUrl:@"http://seb.iriscouch.com/school/_design/project/_view/mandag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@"***************  Here is todays schedule  ***************");
+
                 NSLog(@"%@",[Couch parseData:data]);
             }];
-            
+            [couch reqToUrl:@"http://seb.iriscouch.com/school//_design/project/_view/readmonday" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@" *************** Here is Your Readin Exercises: *************** ");
+                NSLog(@"%@",[Couch parseData:data]);
+            }];
+
         }
         if([dayOfWeek isEqual:@"2"])
         {
             [couch reqToUrl:@"http://seb.iriscouch.com/school/_design/project/_view/tisdag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@"***************  Here is todays schedule  ***************");
+
+                NSLog(@"%@",[Couch parseData:data]);
+            }];
+            [couch reqToUrl:@"http://seb.iriscouch.com/school//_design/project/_view/readtuesday" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@" *************** Here is Your Readin Exercises: *************** ");
                 NSLog(@"%@",[Couch parseData:data]);
             }];
             
@@ -224,11 +247,19 @@ int main(int argc, const char * argv[])
             [couch reqToUrl:@"http://seb.iriscouch.com/school/_design/project/_view/onsdag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
                 NSLog(@"%@",[Couch parseData:data]);
             }];
+            [couch reqToUrl:@"http://seb.iriscouch.com/school//_design/project/_view/readwednesday" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@" *************** Here is Your Readin Exercises: *************** ");
+                NSLog(@"%@",[Couch parseData:data]);
+            }];
             
         }
         if([dayOfWeek isEqual:@"4"])
         {
             [couch reqToUrl:@"http://seb.iriscouch.com/school/_design/project/_view/torsdag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@"%@",[Couch parseData:data]);
+            }];
+            [couch reqToUrl:@"http://seb.iriscouch.com/school//_design/project/_view/readthursday" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@" *************** Here is Your Readin Exercises: *************** ");
                 NSLog(@"%@",[Couch parseData:data]);
             }];
             
@@ -238,72 +269,35 @@ int main(int argc, const char * argv[])
             [couch reqToUrl:@"http://seb.iriscouch.com/school/_design/project/_view/fredag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
                 NSLog(@"%@",[Couch parseData:data]);
             }];
-            
+            [couch reqToUrl:@"http://seb.iriscouch.com/school//_design/project/_view/readfriday" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@" *************** Here is Your Readin Exercises: *************** ");
+                NSLog(@"%@",[Couch parseData:data]);
+            }];
         }
         if([dayOfWeek isEqualTo:@"6"] || [dayOfWeek isEqualTo:@"7"])
         {
+            
             NSLog(@"It´s the weekend dude. have a beer");
+            [couch reqToUrl:@"http://seb.iriscouch.com/school//_design/project/_view/readweekend" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+                NSLog(@" *************** Here is Your Readin Exercises: *************** ");
+                NSLog(@"%@",[Couch parseData:data]);
+            }];
+            
+            
                 }
      
-         }
-    
-            
-        else {
+         }else
+         {
             NSLog(@"Wrong Name or Class");
                                         }
                                                     }];
                                                 }];
+         
         
-         
-        */
-        /*
-         
-        testar
-    __block id result1;
-    Couch *couch =[[Couch alloc] init];
-         
-    [couch reqToUrl:@"Http://localhost:5984/test/_design/project/_view/tisdag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
-        NSLog(@"%@",data);
-        [couch reqToUrl:@"Http://localhost:5984/test/Jimmy" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
-        id result2 = [Couch parseData:data];
-        if ([[result1 valueForKey:@"id"] isEqualTo:[result2 valueForKey:@"id"]]) {
-        NSLog(@"Här är ditt schema %@",result1);
-        } else {
-        NSLog(@"Fel Student namn eller Schema, Var god försök igen");
-                }
-            }];
-         
-                        NSLog(@"%@", [Couch parseData:data]);
-            result1 = [Couch parseData:data];
-      
-        }];
-         
          */
+        
 
-        
-        
-        /*
-        
-        __block id result1;
-        Couch *couch =[[Couch alloc] init];
-        
-        [couch reqToUrl:@"Http://localhost:5984/mongo3/_design/project/_view/mondag" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
-            //            NSLog(@"%@",response);
-            //            NSLog(@"Elev namn eller Schema stämmer inte%@",error);
-            //            NSLog(@"%@",data);
-            //
-            result1 = [Couch parseData:data];
-            [couch reqToUrl:@"Http://localhost:5984/mongo3/_design/project/_view/firstname?key=jimmy" HttpMethod:@"GET" body:nil onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
-                id result2 = [Couch parseData:data];
-                if ([[result1 valueForKey:@"_id"] isEqualTo:[result2 valueForKey:@"firstName"]]) {
-                    NSLog(@"Här är ditt schema %@",result1);
-                    
-                } else {
-                    NSLog(@"Fel Student namn eller Schema, Var god försök igen");
-                }
-            }];
-        }];
-*/
+    
     
         [[NSRunLoop currentRunLoop] run];
         

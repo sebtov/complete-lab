@@ -1,13 +1,25 @@
-//
-//  Read+Json.m
-//  labV2
-//
-//  Created by sebastian holmqvist on 2013-05-14.
-//  Copyright (c) 2013 Jimmy Lidström. All rights reserved.
-//
+
 
 #import "Read+Json.h"
 
-@implementation Read_Json
+@implementation Read (Json)
 
+-(id)jsonValue
+{
+    NSMutableDictionary *selfAsJson = [[NSMutableDictionary alloc] init];
+    
+    
+    selfAsJson[@"readMonday"] = self.readMonday;
+    selfAsJson[@"readTuesday"] = self.readTuesday;
+    selfAsJson[@"readWednesday"] = self.readWednesday;
+    selfAsJson[@"readThursday"] = self.readThursday;
+    selfAsJson[@"readFriday"] = self.readFriday;
+    selfAsJson[@"readWeekend"] = self.readWeekend;
+
+    selfAsJson[@"classId"] = self.classId;
+    
+    
+    return selfAsJson;
+}
 @end
+

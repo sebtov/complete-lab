@@ -1,10 +1,4 @@
-//
-//  Schema+Json.m
-//  labV2
-//
-//  Created by sebastian holmqvist on 2013-04-22.
-//  Copyright (c) 2013 Jimmy Lidström. All rights reserved.
-//
+
 
 #import "Schema+Json.h"
 

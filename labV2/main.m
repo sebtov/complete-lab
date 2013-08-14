@@ -19,15 +19,16 @@ int main(int argc, const char * argv[])
         NSLog(@"%@",dayOfWeek);
         
 #pragma mark Create a student
-/*
-       
+
+       // In URL use StudentName for Id
+        /*
         NSLog(@"*************** ADD STUDENT ***************");
         Couch *couch =[[Couch alloc] init];
         Student *student = [[Student alloc] initWithName:@"Olle" lastName:@"Master" klass:@"1C"];
         if([student.firstName isEqualTo:@""] || [student.lastName isEqualTo:@""] || [student.klass isEqualTo:@""]){
             NSLog(@"Leave no blank spaces");
         } else {
-            [couch reqToUrl:@"http://seb.iriscouch.com/school/olle" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
+            [couch reqToUrl:@"http://seb.iriscouch.com/school/alle" HttpMethod:@"PUT" body:[student json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
               
                 
                 NSLog(@"%@", [Couch parseData:data]);
@@ -36,16 +37,17 @@ int main(int argc, const char * argv[])
                      }];
                 
         }
-        
-    */    
+        */
+       
        
 #pragma mark Send Message to Student
  //USE studentId to send to rigth student
-       /*
+       
+        /*
         NSLog(@"***************  SEND MESSEGE  ***************");
 
         Couch *couch =[[Couch alloc] init];
-            SendMessage *message =[[SendMessage alloc]initWithMessage:@"hejsan jimmy, bla bil" StudentId:@"86742F93-9CE5-4187-B89F-EB5C9EF4A35F"];{
+            SendMessage *message =[[SendMessage alloc]initWithMessage:@"Fotbolls match" StudentId:@"86742F93-9CE5-4187-B89F-EB5C9EF4A35F"];{
         
             [couch reqToUrl:@"http://seb.iriscouch.com/messages" HttpMethod:@"POST" body:[message json] onComplete:^(NSURLResponse *response, NSData *data, NSError *error) {
                 NSLog(@"%@", [Couch parseData:data]);

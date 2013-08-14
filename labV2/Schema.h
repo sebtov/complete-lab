@@ -6,15 +6,15 @@
 
 
 
-@property (nonatomic, copy) NSString *Mandag;
-@property (nonatomic, copy) NSString *Tisdag;
-@property (nonatomic, copy) NSString *Onsdag;
-@property (nonatomic, copy) NSString *Torsdag;
-@property (nonatomic, copy) NSString *Fredag;
+@property (nonatomic, copy) NSString *Monday;
+@property (nonatomic, copy) NSString *Tuesday;
+@property (nonatomic, copy) NSString *Wednesday;
+@property (nonatomic, copy) NSString *Thursday;
+@property (nonatomic, copy) NSString *Friday;
 
 @property (nonatomic, copy, readonly) NSString *studentId;
 
--(id) initMandag:(NSString*) Mandag InitTisdag:(NSString*) Tisdag InitOnsdag:(NSString*) Onsdag InitTorsdag:(NSString*) Torsdag InitFredag:(NSString*) Fredag;
+-(id) initMonday:(NSString*) Monday InitTuesday:(NSString*) Tuesday InitWednesday:(NSString*) Wednesday InitThursday:(NSString*) Thursday InitFriday:(NSString*) Friday;
 
 
 +(id) dayFromJson:(NSDictionary*) dayAsJson;

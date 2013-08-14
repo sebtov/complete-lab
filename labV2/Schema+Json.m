@@ -8,11 +8,11 @@
 {
     NSMutableDictionary *selfAsJson = [[NSMutableDictionary alloc] init];
     
-    selfAsJson[@"Måndag"] = self.Mandag;
-    selfAsJson[@"Tisdag"] = self.Tisdag;
-    selfAsJson[@"Onsdag"] = self.Onsdag;
-    selfAsJson[@"Torsdag"] = self.Torsdag;
-    selfAsJson[@"Fredag"] = self.Fredag;
+    selfAsJson[@"Måndag"] = self.Monday;
+    selfAsJson[@"Tisdag"] = self.Tuesday;
+    selfAsJson[@"Onsdag"] = self.Wednesday;
+    selfAsJson[@"Torsdag"] = self.Thursday;
+    selfAsJson[@"Fredag"] = self.Friday;
 
     
     return selfAsJson;

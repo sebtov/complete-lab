@@ -8,30 +8,30 @@
 {
     
     Schema *schema = [[self alloc]init];
-    schema.Mandag = dayAsJson[@"Mandag"];
-    schema.Tisdag = dayAsJson[@"Tisdag"];
-    schema.Onsdag = dayAsJson[@"Onsdag"];
-    schema.Torsdag = dayAsJson[@"Torsdag"];
-    schema.Fredag = dayAsJson[@"Fredag"];
+    schema.Monday = dayAsJson[@"Mandag"];
+    schema.Tuesday = dayAsJson[@"Tisdag"];
+    schema.Wednesday = dayAsJson[@"Onsdag"];
+    schema.Thursday = dayAsJson[@"Torsdag"];
+    schema.Friday = dayAsJson[@"Fredag"];
 
     
     return schema;
 }
 -(id) init
 {
-    return [self initMandag:@"Mandag" InitTisdag:@"Tisdag" InitOnsdag:@"Onsdag" InitTorsdag:@"Torsdag" InitFredag:@"fredag"];
+    return [self initMonday:@"Mandag" InitTuesday:@"Tisdag" InitWednesday:@"Onsdag" InitThursday:@"Torsdag" InitFriday:@"fredag"];
 }
 
 
--(id) initMandag:(NSString *)Mandag InitTisdag:(NSString *)Tisdag InitOnsdag:(NSString *)Onsdag InitTorsdag:(NSString *)Torsdag InitFredag:(NSString *)Fredag{
+-(id) initMonday:(NSString *)Monday InitTuesday:(NSString *)Tuesday InitWednesday:(NSString *)Wednesday InitThursday:(NSString *)Thursday InitFriday:(NSString *)Friday{
     self = [super init];
     
     if(self) {
-        self.Mandag = Mandag;
-        self.Tisdag = Tisdag;
-        self.Onsdag = Onsdag;
-        self.Torsdag = Torsdag;
-        self.Fredag = Fredag;
+        self.Monday = Monday;
+        self.Tuesday = Tuesday;
+        self.Wednesday = Wednesday;
+        self.Thursday = Thursday;
+        self.Friday = Friday;
 
 
     }
@@ -40,7 +40,7 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"Måndag:%@ Tisdag:%@ Onsdag:%@ Torsdag:%@ Fredag:%@", self.Mandag, self.Tisdag, self.Onsdag, self.Torsdag, self.Fredag];
+    return [NSString stringWithFormat:@"Måndag:%@ Tisdag:%@ Onsdag:%@ Torsdag:%@ Fredag:%@", self.Monday, self.Tuesday, self.Wednesday, self.Thursday, self.Friday];
 }
 
 
@@ -54,11 +54,11 @@
 {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
-    dict[@"Mandag"] = self.Mandag;
-    dict[@"Tisdag"] = self.Tisdag;
-    dict[@"Onsdag"] = self.Onsdag;
-    dict[@"Torsdag"] = self.Torsdag;
-    dict[@"Fredag"] = self.Fredag;
+    dict[@"Mandag"] = self.Monday;
+    dict[@"Tisdag"] = self.Tuesday;
+    dict[@"Onsdag"] = self.Wednesday;
+    dict[@"Torsdag"] = self.Thursday;
+    dict[@"Fredag"] = self.Friday;
 
     return dict;
 }

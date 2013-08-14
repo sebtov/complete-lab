@@ -28,7 +28,7 @@
 
 - (void)testExample
 {
-    Schema *Newschema =[[Schema alloc]initMandag:@"1" InitTisdag:@"2" InitOnsdag:@"3" InitTorsdag:@"4" InitFredag:@"5"];
+    Schema *Newschema =[[Schema alloc]initMonday:@"1" InitTuesday:@"2" InitWednesday:@"3" InitThursday:@"4" InitFriday:@"5"];
     NSArray *scheman = @[Newschema];
     NSLog(@"%@",scheman);
     STAssertEquals(Newschema.Fredag,@"5",@"Should be 5");

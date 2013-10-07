@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4504" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewStudentsViewController">
+            <connections>
+                <outlet property="backgroundView" destination="1" id="QTS-sL-1tn"/>
+                <outlet property="searchBarStudents" destination="nzX-d7-98R" id="E3k-05-WTA"/>
+                <outlet property="searchDisplayController" destination="BWI-3Y-Fei" id="Y3d-LE-w44"/>
+                <outlet property="showAllStudents" destination="oLu-74-nHB" id="KUx-dQ-Wq5"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzX-d7-98R">
+                    <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="45L-u5-v47"/>
+                    </connections>
+                </searchBar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-WM-PmU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Log out" id="Q2O-Yx-W6b">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="LogOut:" destination="-1" id="pXr-SV-Dgs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="JGS-PF-1oD"/>
+                        <barButtonItem style="plain" systemItem="add" id="ptE-Zt-QAV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addNewStudent:" destination="-1" id="ecz-nO-roW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="NCJ-Di-bec"/>
+                        <barButtonItem style="plain" systemItem="refresh" id="kKl-fy-mxk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="syncWithDBOnline:" destination="-1" id="ag8-IV-eif"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" red="0.20589278080000001" green="0.30293538800000003" blue="0.58308753189999996" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oLu-74-nHB">
+                    <rect key="frame" x="0.0" y="88" width="320" height="432"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HUq-qj-KGZ"/>
+                        <outlet property="delegate" destination="-1" id="LGc-h5-Q1r"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+        <searchDisplayController id="BWI-3Y-Fei">
+            <connections>
+                <outlet property="delegate" destination="-1" id="N9c-fU-H3n"/>
+                <outlet property="searchBar" destination="nzX-d7-98R" id="fyr-41-8lz"/>
+                <outlet property="searchContentsController" destination="-1" id="RBn-pY-T68"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="Nqu-T4-3yy"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="I5f-Ol-pEN"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>
